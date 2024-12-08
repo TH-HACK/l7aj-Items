@@ -15,7 +15,7 @@ body {
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background: #171010;
+  background: #000000;
   margin: 0;
   height: 100vh;
   width: 100vw;
@@ -75,6 +75,15 @@ body {
 
 .dialog_main_bg {
   background: #2B2B2B;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  /* يمكنك تعديل العرض والارتفاع هنا */
+  width: 150px; /* عرض النافذة المنبثقة */
+  height: 250px; /* ارتفاع النافذة المنبثقة */
+  }
 }
 
 #background_dia {
@@ -254,11 +263,6 @@ body {
 .enabled {
   pointer-events: visible;
   opacity: 1;
-}
-
-#tele_icon {
-  width: 20px;
-  fill: #CFD8DC;
 }
 
 img {
