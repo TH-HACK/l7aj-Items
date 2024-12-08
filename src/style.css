@@ -70,20 +70,29 @@ body {
   -ms-flex-align: center;
   align-items: center;
   background: #607D8B;
-
 }
 
 .dialog_main_bg {
   background: #2B2B2B;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  /* يمكنك تعديل العرض والارتفاع هنا */
-  width: 150px; /* عرض النافذة المنبثقة */
-  height: 250px; /* ارتفاع النافذة المنبثقة */
-  }
+  flex-direction: row; /* ترتيب العناصر أفقياً */
+  align-items: center; /* محاذاة العناصر عموديًا */
+  justify-content: space-between; /* توزيع العناصر */
+  padding: 20px; /* إضافة مساحة داخلية */
+}
+
+.dialog_main_bg img {
+  max-width: 30%; /* تحديد عرض الصورة */
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px; /* مسافة بين الصورة والنص */
+  width: 100px;
+  height: 250px;
+}
+
+.dialog_main_bg .dialog_text {
+  flex: 1; /* النص يأخذ المساحة المتبقية */
+  color: white;
 }
 
 #background_dia {
@@ -99,8 +108,7 @@ body {
   z-index: -1;
 }
 
-
-
+/* Other styles omitted for brevity */
 
 #main_load {
   width: 100%;
