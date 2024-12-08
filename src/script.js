@@ -314,7 +314,8 @@ const links = {
   clprogroup: "https://t.me/ffcsharezone", // Telegram group for sharing zone
   tg: "https://t.me/Crystal_Person", // Telegram link for a person
   gt: "https://github.com/jinix6" // GitHub profile link
-
+  yt: "https://youtube.com/@l7aj.1m?si=l2LIIT2O5YnOkEEK" // chin youtub
+};
 // Iterate over the entries of the 'links' object
 Object.entries(links).forEach(([t, e]) => {
   // For each entry, add a 'click' event listener to the element with the corresponding ID
