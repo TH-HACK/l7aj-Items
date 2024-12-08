@@ -79,6 +79,8 @@ body {
   align-items: center; /* محاذاة العناصر عموديًا */
   justify-content: space-between; /* توزيع العناصر */
   padding: 20px; /* إضافة مساحة داخلية */
+  width: 100px;
+  height: 250px;
 }
 
 .dialog_main_bg img {
@@ -86,8 +88,6 @@ body {
   height: auto;
   border-radius: 10px;
   margin-right: 20px; /* مسافة بين الصورة والنص */
-  width: 100px;
-  height: 250px;
 }
 
 .dialog_main_bg .dialog_text {
