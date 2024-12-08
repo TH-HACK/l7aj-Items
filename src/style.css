@@ -38,7 +38,7 @@ body {
 }
 
 /* تنسيق شريط البحث */
-#search_input {
+.search_input {
   width: 300px; /* عرض شريط البحث */
   height: 40px; /* ارتفاع شريط البحث */
   border: none; /* إزالة الحدود الافتراضية */
@@ -51,7 +51,7 @@ body {
 }
 
 /* حاوية التأثير */
-#search_container {
+.search_container {
   position: relative; /* تحديد مرجع التأثير */
   width: 300px; /* نفس عرض شريط البحث */
   height: 40px; /* نفس ارتفاع شريط البحث */
