@@ -15,7 +15,7 @@ body {
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background: #000000;
+  background: #171010;
   margin: 0;
   height: 100vh;
   width: 100vw;
@@ -70,29 +70,11 @@ body {
   -ms-flex-align: center;
   align-items: center;
   background: #607D8B;
+
 }
 
 .dialog_main_bg {
   background: #2B2B2B;
-  display: flex;
-  flex-direction: row; /* ترتيب العناصر أفقياً */
-  align-items: center; /* محاذاة العناصر عموديًا */
-  justify-content: space-between; /* توزيع العناصر */
-  padding: 20px; /* إضافة مساحة داخلية */
-  width: 100px;
-  height: 300px;
-}
-
-.dialog_main_bg img {
-  max-width: 30%; /* تحديد عرض الصورة */
-  height: auto;
-  border-radius: 10px;
-  margin-right: 20px; /* مسافة بين الصورة والنص */
-}
-
-.dialog_main_bg .dialog_text {
-  flex: 1; /* النص يأخذ المساحة المتبقية */
-  color: white;
 }
 
 #background_dia {
@@ -108,7 +90,8 @@ body {
   z-index: -1;
 }
 
-/* Other styles omitted for brevity */
+
+
 
 #main_load {
   width: 100%;
@@ -273,6 +256,11 @@ body {
   opacity: 1;
 }
 
+#tele_icon {
+  width: 20px;
+  fill: #CFD8DC;
+}
+
 img {
   height: auto;
   width: 100%;
@@ -367,4 +355,4 @@ input[disabled] {
     opacity: 0;
     visibility: hidden;
   }
-}
+  }
