@@ -12,6 +12,7 @@ const extra_set = document.getElementById("extra_set")
 extra_set.classList.remove("collapsed2");
 extra_set.classList.add("expanded2");
 const notFoundText = () => document.getElementById('not_found_text');
+
 // Fetch data from multiple JSON files concurrently using Promise.all
 Promise.all([
   // Fetching 'cdn.json' and parsing it as JSON
@@ -41,7 +42,6 @@ Promise.all([
     // Log any errors encountered during the fetch or processing
     console.error('Error fetching data:', error);
   });
-
 
 
 
