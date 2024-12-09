@@ -2954,4 +2954,10 @@
         "icon": "Icon_Pet_Aurorafox",
         "description": "None"
     }
+    
+    {
+        "itemID": "????",
+        "icon": "Icon_avatar_sc_top_auroraboy",
+        "description": "Morocco"
+    },
 ]
