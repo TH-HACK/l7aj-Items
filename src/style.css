@@ -53,8 +53,8 @@ body {
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 14px;
-    background-color: rgba(0, 0, 0, 0); /* شفافية 100% */
-    border: 1px solid #000; /* حدود للزر (اختياري) */
+    background-color: rgba(96, 125, 139, 0.5); /* اللون #607D8B مع شفافية 50% */
+    border: 1px solid #000; /* إضافة حدود للزر (اختياري) */
 }
 
 .container_dialog {
