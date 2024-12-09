@@ -106,26 +106,6 @@ body {
 }
 
 /* Other styles omitted for brevity */
-#extra_set {
-  display: flex; /* تفعيل flexbox */
-  flex-direction: column; /* ترتيب العناصر عموديًا */
-  align-items: center; /* محاذاة الصور في المنتصف أفقيًا */
-  justify-content: flex-start; /* محاذاة العناصر في الأعلى */
-  transition: all 0.25s ease;
-  text-align: center;
-  background: white;
-  bottom: 80px;
-  right: 3.5rem;
-  border-radius: 14px;
-  position: fixed;
-  z-index: 50;
-  padding-top: 20px; /* إضافة مسافة من الأعلى */
-}
-
-#extra_set img {
-  width: 20%; /* عرض الصور */
-  margin-bottom: 10px; /* مسافة بين الصور */
-}
 
 
 #main_load {
