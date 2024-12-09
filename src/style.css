@@ -36,88 +36,57 @@ body {
   padding-left: 5%;
   padding-right: 5%;
 }
+    #input_d {
+      width: 300px; /* عرض شريط البحث */
+      height: 40px; /* ارتفاع شريط البحث */
+      border: none; /* إزالة الحدود الافتراضية */
+      padding: 10px; /* مسافة داخلية */
+      border-radius: 10px; /* حواف مدورة */
+      outline: none; /* إزالة إطار التحديد */
+      font-size: 16px; /* حجم النص */
+      position: relative; /* لتحديد موقع الحاوية */
+      z-index: 1; /* لضمان ظهور النص فوق الإطار */
+    }
 
-/* تنسيق مستطيل البحث */
-#search_input {
-  width: 300px; /* عرض المستطيل */
-  height: 40px; /* ارتفاع المستطيل */
-  border: none; /* إزالة الحدود الافتراضية */
-  padding: 10px; /* إضافة مسافة داخلية */
-  border-radius: 10px; /* حواف مدورة */
-  outline: none; /* إزالة إطار التحديد */
-  font-size: 16px; /* حجم النص */
-  position: relative; /* لتحديد موقع الحاوية */
-  z-index: 1; /* لضمان ظهور النص فوق الإطار */
-}
+    /* حاوية التأثير */
+    #input_search_bg {
+      position: relative; /* تحديد مرجع التأثير */
+      width: 300px; /* نفس عرض شريط البحث */
+      height: 40px; /* نفس ارتفاع شريط البحث */
+      margin: 20px auto; /* محاذاة في المنتصف */
+      display: flex; /* تنظيم العناصر داخليًا */
+      align-items: center;
+      justify-content: center;
+    }
 
-/* إضافة خط متحرك حول المستطيل */
-#search_input::before {
-  content: ""; /* إضافة عنصر افتراضي */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px; /* نفس حواف المستطيل */
-  border: 3px solid transparent; /* إزالة اللون الافتراضي للحدود */
-  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
-  background-size: 300% 300%; /* حجم الألوان المتدرجة */
-  animation: rotate-border 2s linear infinite; /* تأثير الحركة */
-  z-index: -1; /* وضع العنصر خلف المستطيل */
-}
+    /* الخط المتحرك */
+    #input_search_bg::before {
+      content: ""; /* عنصر افتراضي */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px; /* نفس حواف شريط البحث */
+      border: 3px solid transparent; /* إزالة لون الحدود الافتراضي */
+      background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+      background-size: 300% 300%; /* مضاعفة الألوان للحركة */
+      animation: rotate-border 2s linear infinite; /* تطبيق الحركة */
+      z-index: 0; /* خلف شريط البحث */
+    }
 
-/* تعريف حركة الخط المتحرك */
-@keyframes rotate-border {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-/* إضافة خط ملون متحرك حول مستطيل البحث */
-#input_d {
-  width: 100%; /* عرض الحقل بالكامل */
-  height: 40px; /* ارتفاع الحقل */
-  padding-left: 10px;
-  padding-right: 30px; /* مسافة داخلية للتناسب مع النص */
-  border-radius: 14px; /* حواف مدورة */
-  background: transparent; /* خلفية شفافة */
-  color: white; /* النص باللون الأبيض */
-  border: 2px solid transparent; /* إزالة الحدود الافتراضية */
-  outline: none; /* إزالة إطار التحديد الافتراضي */
-  font-size: 14px; /* حجم النص */
-  position: relative; /* لتحديد موقع التأثيرات */
-}
-
-#input_d::before {
-  content: ""; /* إضافة عنصر افتراضي */
-  position: absolute;
-  top: -5px; /* رفع الخط فوق الحافة */
-  left: -5px; /* رفع الخط على الجوانب */
-  width: calc(100% + 10px); /* تمديد العرض */
-  height: calc(100% + 10px); /* تمديد الارتفاع */
-  border-radius: 14px; /* نفس الحواف المدورة */
-  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
-  background-size: 300% 300%; /* زيادة حجم الألوان المتدرجة */
-  animation: rotate-border 2s linear infinite; /* تطبيق الحركة المتدرجة */
-  z-index: -1; /* وضع العنصر خلف الحقل */
-}
-
-@keyframes rotate-border {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+    /* حركة الدوران */
+    @keyframes rotate-border {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 .page {
   display: -ms-grid;
   display: grid;
