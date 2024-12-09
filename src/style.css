@@ -108,10 +108,10 @@ body {
 /* Other styles omitted for brevity */
 #extra_set {
   display: flex; /* تفعيل flexbox */
-  flex-direction: row; /* جعل الصور بجانب بعضها البعض */
-  justify-content: center; /* محاذاة الصور في منتصف الحاوية */
-  align-items: center; /* محاذاة الصور رأسياً في منتصف الحاوية */
-  transition-all: all 0.25s ease;
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  align-items: center; /* محاذاة الصور في المنتصف أفقيًا */
+  justify-content: flex-start; /* محاذاة العناصر في الأعلى */
+  transition: all 0.25s ease;
   text-align: center;
   background: white;
   bottom: 80px;
@@ -119,12 +119,12 @@ body {
   border-radius: 14px;
   position: fixed;
   z-index: 50;
+  padding-top: 20px; /* إضافة مسافة من الأعلى */
 }
 
 #extra_set img {
   width: 20%; /* عرض الصور */
-  margin-top: 20px; /* مسافة من الأعلى */
-  margin-right: 10px; /* مسافة بين الصور */
+  margin-bottom: 10px; /* مسافة بين الصور */
 }
 
 
