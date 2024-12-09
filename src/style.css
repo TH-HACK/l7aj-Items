@@ -78,6 +78,46 @@ body {
     background-position: 0% 50%;
   }
 }
+/* إضافة خط ملون متحرك حول مستطيل البحث */
+#input_d {
+  width: 100%; /* عرض الحقل بالكامل */
+  height: 40px; /* ارتفاع الحقل */
+  padding-left: 10px;
+  padding-right: 30px; /* مسافة داخلية للتناسب مع النص */
+  border-radius: 14px; /* حواف مدورة */
+  background: transparent; /* خلفية شفافة */
+  color: white; /* النص باللون الأبيض */
+  border: 2px solid transparent; /* إزالة الحدود الافتراضية */
+  outline: none; /* إزالة إطار التحديد الافتراضي */
+  font-size: 14px; /* حجم النص */
+  position: relative; /* لتحديد موقع التأثيرات */
+}
+
+#input_d::before {
+  content: ""; /* إضافة عنصر افتراضي */
+  position: absolute;
+  top: -5px; /* رفع الخط فوق الحافة */
+  left: -5px; /* رفع الخط على الجوانب */
+  width: calc(100% + 10px); /* تمديد العرض */
+  height: calc(100% + 10px); /* تمديد الارتفاع */
+  border-radius: 14px; /* نفس الحواف المدورة */
+  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+  background-size: 300% 300%; /* زيادة حجم الألوان المتدرجة */
+  animation: rotate-border 2s linear infinite; /* تطبيق الحركة المتدرجة */
+  z-index: -1; /* وضع العنصر خلف الحقل */
+}
+
+@keyframes rotate-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .page {
   display: -ms-grid;
   display: grid;
