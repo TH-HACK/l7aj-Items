@@ -36,7 +36,7 @@ body {
   padding-left: 5%;
   padding-right: 5%;
 }
-    #input_d {
+    #input_search_bg {
       width: 300px; /* عرض شريط البحث */
       height: 40px; /* ارتفاع شريط البحث */
       border: none; /* إزالة الحدود الافتراضية */
@@ -49,7 +49,7 @@ body {
     }
 
     /* حاوية التأثير */
-    #input_search_bg {
+    #input_d {
       position: relative; /* تحديد مرجع التأثير */
       width: 300px; /* نفس عرض شريط البحث */
       height: 40px; /* نفس ارتفاع شريط البحث */
@@ -60,7 +60,7 @@ body {
     }
 
     /* الخط المتحرك */
-    #input_search_bg::before {
+    #input_d::before {
       content: ""; /* عنصر افتراضي */
       position: absolute;
       top: 0;
