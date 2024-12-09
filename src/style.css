@@ -76,7 +76,7 @@ body {
   align-items: center; /* محاذاة العناصر عموديًا */
   justify-content: space-between; /* توزيع العناصر */
   padding: 20px; /* إضافة مساحة داخلية */
-  width: 100px;
+  width: 80px;
   height: 400px;
 }
 
