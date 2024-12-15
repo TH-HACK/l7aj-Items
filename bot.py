@@ -1,5 +1,6 @@
 import json
 import os
+import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
@@ -10,7 +11,10 @@ with open("itemData.json", "r") as f:
 with open("cdn.json", "r") as f:
     cdn_data = json.load(f)
 
-# دالة البحث عن العنصر
+# API رابط المستودع على GitHub للمستودع الفرعي
+GITHUB_API_URL = 'https://api.github.com/repos/jinix6/ff-resources/contents/pngs/300x300/'
+
+# دالة البحث عن العنصر في itemData
 def search_item(query):
     for item in items_data:
         if query.lower() in item.get("description", "").lower():
@@ -28,6 +32,17 @@ def get_image_url(item_id):
         if item_id in cdn_entry:
             return cdn_entry[item_id]
     return None
+
+# دالة البحث في مستودع GitHub باستخدام API للمستودع الفرعي
+def get_image_from_github(icon_name):
+    url = f"{GITHUB_API_URL}{icon_name}.png"
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        image_url = response.json()[0]['download_url']
+        return image_url
+    else:
+        return None
 
 # تنسيق البيانات بتنسيق JSON مع رموز
 def format_json_with_emojis(item_data):
@@ -49,6 +64,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if item_data:
         item_id = item_data["itemID"]
         image_url = get_image_url(item_id)
+        
+        # إذا لم يتم العثور على صورة في cdn.json، ابحث في GitHub
+        if not image_url:
+            image_url = get_image_from_github(item_data["icon"])
         
         # تنسيق البيانات بتنسيق JSON
         formatted_message = f"✨ **معلومات العنصر بتنسيق JSON** ✨\n```json\n{format_json_with_emojis(item_data)}\n```"
