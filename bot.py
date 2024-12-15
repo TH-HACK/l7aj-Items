@@ -11,7 +11,7 @@ with open("itemData.json", "r") as f:
 with open("cdn.json", "r") as f:
     cdn_data = json.load(f)
 
-# API رابط المستودع على GitHub للمستودع الفرعي
+# API رابط المستودع على GitHub
 GITHUB_API_URL = 'https://api.github.com/repos/jinix6/ff-resources/contents/pngs/300x300/'
 
 # دالة البحث عن العنصر في itemData
@@ -33,7 +33,7 @@ def get_image_url(item_id):
             return cdn_entry[item_id]
     return None
 
-# دالة البحث في مستودع GitHub باستخدام API للمستودع الفرعي
+# دالة البحث في مستودع GitHub باستخدام API
 def get_image_from_github(icon_name):
     url = f"{GITHUB_API_URL}{icon_name}.png"
     response = requests.get(url)
